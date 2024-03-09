@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Lego Collection</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<header>
+    <%- include('partials/navbar', { page: '/home' }) %>
+</header>
+<body>
+    <div class="container mx-auto mt-8">
+        <div class="hero py-20 text-center">
+            <div class="content-wrapper">
+                <p class="text-3xl font-bold mb-4">My Lego Collection</p>
+                <p class="py-6">Explore the realm of LEGO sets</p>
+                <a href="/lego/sets" class="btn btn-primary">View Sets</a>
+            </div>
+        </div>
+    </div>    
+    
+    <div class="container mx-auto text-center mt-10">
+        <div class="grid grid-cols-3 gap-4 mt-8">
+            
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <figure><img src="https://cdn.rebrickable.com/media/sets/001-1.jpg" style="max-width: 100%; height: 300px" alt="Gears"></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Gears</h2>
+                    <p>A classic set from 1965, consisting of 43 parts.</p>
+                    <a href="/lego/sets/001-1" class="btn btn-primary">View</a>
+                </div>
+            </div>
+            
+            
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <figure><img src="https://cdn.rebrickable.com/media/sets/0011-2.jpg" style="max-width: 100%; height: 300px" alt="Town Mini-Figures"></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Town Mini-Figures</h2>
+                    <p>Released in 1979, this set includes 12 mini-figures.</p>
+                    <a href="/lego/sets/0011-2" class="btn btn-primary">View</a>
+                </div>
+            </div>
+            
+            
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <figure><img src="https://cdn.rebrickable.com/media/sets/0011-3.jpg" style="max-width: 100%; height: 300px" alt="Castle 2 for 1 Bonus Offer"></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Castle 2 for 1 Bonus Offer</h2>
+                    <p>A special offer from 1987, enriching your castle collection.</p>
+                    <a href="/lego/sets/0011-3" class="btn btn-primary">View</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

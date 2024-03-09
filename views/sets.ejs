@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sets - Lego Collection</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<header class="bg-white shadow">
+    <%- include('partials/navbar', { page: '/lego/sets' }) %>
+</header>
+<body>
+    <div class="container mx-auto mt-10">
+        <div class="hero py-20 text-center">
+            <div class="content-wrapper">
+                <p class="text-3xl font-bold mb-4">My Lego Collection</p> <br>
+            </div>
+    </div>    
+    <div> 
+        <p class="text-1 font-bold">Filter: </p>
+        <a href="/lego/sets?theme=Technic" class="btn btn-accent">Technic</a>
+        <a href="/lego/sets?theme=Icons" class="btn btn-accent">Icons</a>
+        <a href="/lego/sets?theme=Basic Set" class="btn btn-accent">Basic Set</a></div>
+</div>
+    
+<div class="container mx-auto text-center mt-10">
+    <div class="grid grid-cols-3 gap-4 mt-8">
+        <% sets.forEach(function(set) { %>
+            <div class="card w-96 bg-base-100  shadow-xl">
+                <figure><img src="<%= set.img_url %>" alt="Gears" style="max-width: 100%; height: 150px"></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Name: <%= set.name %></h2>
+                    <a href="/lego/sets?theme=<%= set.theme %>" class="btn">Theme: <%= set.theme %> </a>
+                    <p>Year: <%= set.year %></p>
+                    <p>Number of Parts: <%= set.num_parts %></p>
+                    <a href="/lego/sets/<%= set.set_num %>" class="btn btn-primary">View</a>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+</body>
+</body>
+</html>
