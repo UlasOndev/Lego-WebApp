@@ -19,10 +19,11 @@
                 <div class="card w-96 bg-base-100  shadow-xl mx-auto">
                     <figure><img src="<%= set.img_url %>" alt="Gears" style="max-width: 100%; height: auto"></figure>
                     <div class="card-body">
-                        <p class="py-3">Theme: <%= set.theme %></p>
+                        <p class="py-3">Theme: <%= set.Theme.name %></p>
                         <p class="py-3">Year Released: <%= set.year %></p>
                         <p class="py-3">Number of Parts: <%= set.num_parts %></p>
                         <p class="py-3"><div id="quote" class="py-6"></div></p>
+                        <a href="/lego/editSet/<%= set.set_num %>" class="btn btn-success">Edit</a>
                         <a href="#" onclick="history.back(); return false;" class="btn btn-primary">Return</a>
                     </div>
             </div>

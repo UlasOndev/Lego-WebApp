@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= set.name %> - Edit</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<header>
+    <%- include('partials/navbar', { page: '' }) %> 
+</header>
+<body>
+    <div class="text-center">
+    <p class="text-3xl font-bold mb-4">Edit Set - <%= set.name %></p><br>
+    <div class="container mx-auto text-center mt-10">
+        <div class="grid grid-cols-1 gap-4 mt-8">
+          <form action="/lego/editSet" method="post">
+            <b><label for="theme_id">Theme:</label></b>
+            <select name="theme_id" id="theme_id" required>
+              <% themes.forEach(theme => { %>
+                <option <%= (set.theme_id == theme.id) ? "selected" : "" %> value="<%= theme.id %>">
+                  <%= theme.name %>
+                </option>
+              <% }) %>
+            </select><br><br><br>
+            <b><label for="set_num">Set Number:</label></b>
+            <input type="text" id="set_num" name="set_num" value="<%= set.set_num %>" readonly class="cursor-not-allowed" required><br><br><br>
+            <button type="submit" class="btn btn-primary">Edit Set</button>
+          </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

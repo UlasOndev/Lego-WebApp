@@ -30,7 +30,7 @@
                 <figure><img src="<%= set.img_url %>" alt="Gears" style="max-width: 100%; height: 150px"></figure>
                 <div class="card-body">
                     <h2 class="card-title">Name: <%= set.name %></h2>
-                    <a href="/lego/sets?theme=<%= set.theme %>" class="btn">Theme: <%= set.theme %> </a>
+                    <a href="/lego/sets?theme=<%= set.theme %>" class="btn">Theme: <%= set.Theme.name %> </a>
                     <p>Year: <%= set.year %></p>
                     <p>Number of Parts: <%= set.num_parts %></p>
                     <a href="/lego/sets/<%= set.set_num %>" class="btn btn-primary">View</a>
